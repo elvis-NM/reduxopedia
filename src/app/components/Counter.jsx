@@ -38,7 +38,7 @@ function Counter() {
             </button>
           </div>
         </div>
-        <div class="p-4 col-12 col-md-6">
+        <div className="p-4 col-12 col-md-6">
           <div className="border p-4">
             <h4 className="text-success pb-2">Multiplier Counter</h4>
             <div className="row">
