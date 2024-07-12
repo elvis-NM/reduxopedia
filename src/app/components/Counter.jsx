@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../../redux/slice/counterSlice";
+import { useState } from "react";
 
 function Counter() {
   const count = useSelector((state) => state.counterStore.count);
   const dispatch = useDispatch();
-
+  const [multiplier, setMultiplier] = useState(10);
   return (
     <div
       className="mt-2 pt-3 pl-2 text-center"
@@ -39,8 +40,10 @@ function Counter() {
               <div className="col-4 p-1">
                 <input
                   type="test"
-                  placeholder="multiple"
+                  placeholder="multiple...."
                   className="form-control"
+                  value={multiplier}
+                  onChange={(e) => setMultiplier(e.target.value)}
                 />
               </div>
               <div className="col-4 p-1">
