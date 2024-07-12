@@ -26,7 +26,13 @@ const initalState = () => {
 export const destinationSlice = createSlice({
   name: "destination",
   initialState: initalState,
-  reducers: {},
+  reducers: {
+    destinationClicked: (state, action) => {
+      state.destinationSelected = action.payload;
+      console.log(destinationSlice);
+    },
+  },
 });
 
+export const { destinationClicked } = destinationSlice.actions;
 export const destinationReducer = destinationSlice.reducer;
