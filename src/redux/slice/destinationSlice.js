@@ -40,3 +40,5 @@ export const destinationSlice = createSlice({
 export const { destinationClicked, resetDestination } =
   destinationSlice.actions;
 export const destinationReducer = destinationSlice.reducer;
+
+console.log(destinationSlice.actions.resetDestination.toString()); //f12 destination/resetDestination

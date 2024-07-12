@@ -1,14 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { resetDestination } from "../../redux/slice/destinationSlice";
-import { resetCounter } from "../../redux/slice/counterSlice";
+// import { resetCounter } from "../../redux/slice/counterSlice";
 
 function ResetApp() {
   const dispatch = useDispatch();
 
   const resetCounterAndDestination = () => {
     dispatch(resetDestination());
-    dispatch(resetCounter());
+    // dispatch(resetCounter());
   };
   return (
     <div className="text-center">
